@@ -14,13 +14,6 @@
                 padding: 0;
             }
 
-            table {
-                width: 100%;
-                border-collapse: collapse;
-                margin-bottom: 50px;
-                border: 2px solid #ff8800;
-            }
-
             header,
             section {
                 padding: 20px;
@@ -39,8 +32,9 @@
             .menu-section {
                 background-color: #222;
                 margin: 0 auto;
-                width: 50%;
+                width: 90%;
                 margin-bottom: 20px;
+                max-width: 500px;
             }
 
             h2 {
@@ -67,9 +61,51 @@
                 padding: 10px;
             }
 
+            .menu-list {
+                list-style: none;
+                padding: 0;
+                margin-bottom: 20px;
+            }
+
+            .menu-list li {
+                background-color: #333;
+                margin-bottom: 10px;
+                padding: 10px;
+                border: 1px solid #ff8800;
+                border-radius: 6px;
+            }
+
+            .menu-list label {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                cursor: pointer;
+            }
+
+            .item-info {
+                flex: 1;
+            }
+
+            .item-info strong {
+                display: block;
+                font-size: 1.1em;
+            }
+
+            .details-line {
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.9em;
+            }
+
+            .price {
+                color: #ff8800;
+                font-weight: bold;
+            }
+
             /* Cart styles */
             #cart {
-                width: 50%;
+                width: 90%;
+                max-width: 500px;
                 margin: 0 auto 50px auto;
                 background-color: #222;
                 border: 2px solid #ff8800;
@@ -110,271 +146,7 @@
             <input type="text" id="searchInput" placeholder="Search recipes..." onkeyup="searchMenu()" />
         </div>
         <section class="menu-section" id="menu">
-            <h2>Biryani</h2>
-            <table width="100%" border="1" cellpadding="8" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Select</th>
-                        <th>Recipe</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="checkbox" data-price="14.99" data-name="Mutton Biryani - Single"></td>
-                        <td>Mutton Biryani</td>
-                        <td>Single</td>
-                        <td>$14.99</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="49.99" data-name="Mutton Biryani - Family Pack"></td>
-                        <td>Mutton Biryani</td>
-                        <td>Family Pack</td>
-                        <td>$49.99</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="74.99" data-name="Mutton Biryani - Half Tray"></td>
-                        <td>Mutton Biryani</td>
-                        <td>Half Tray</td>
-                        <td>$74.99</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="149.99" data-name="Mutton Biryani - Full Tray"></td>
-                        <td>Mutton Biryani</td>
-                        <td>Full Tray</td>
-                        <td>$149.99</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="10.99" data-name="Chicken Biryani - Single"></td>
-                        <td>Chicken Biryani</td>
-                        <td>Single</td>
-                        <td>$10.99</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="9.99" data-name="Veg Biryani - Single"></td>
-                        <td>Veg Biryani</td>
-                        <td>Single</td>
-                        <td>$9.99</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h2>Chicken (Any item $9.99)</h2>
-            <table border="1" cellpadding="8" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Select</th>
-                        <th>Recipe</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="checkbox" data-price="9.99" data-name="Butter Chicken"></td>
-                        <td>Butter Chicken</td>
-                        <td>N/A</td>
-                        <td>$9.99</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="9.99" data-name="Chicken Tikka Masala"></td>
-                        <td>Chicken Tikka Masala</td>
-                        <td>N/A</td>
-                        <td>$9.99</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="9.99" data-name="Chicken Kabab"></td>
-                        <td>Chicken Kabab</td>
-                        <td>N/A</td>
-                        <td>$9.99</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="9.99" data-name="Chicken Curry"></td>
-                        <td>Chicken Curry</td>
-                        <td>N/A</td>
-                        <td>$9.99</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h2>Mutton (Any item $14.99)</h2>
-            <table border="1" cellpadding="8" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Select</th>
-                        <th>Recipe</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="checkbox" data-price="14.99" data-name="Mutton Curry"></td>
-                        <td>Mutton Curry</td>
-                        <td>N/A</td>
-                        <td>$14.99</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="14.99" data-name="Mutton Haleem"></td>
-                        <td>Mutton Haleem</td>
-                        <td>N/A</td>
-                        <td>$14.99</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="14.99" data-name="Mutton Arabian Mandi"></td>
-                        <td>Mutton Arabian Mandi</td>
-                        <td>N/A</td>
-                        <td>$14.99</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h2>Starters</h2>
-            <table border="1" cellpadding="8" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Select</th>
-                        <th>Recipe</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="checkbox" data-price="9.99" data-name="Hyd Siddique Kabab"></td>
-                        <td>Hyd Siddique Kabab</td>
-                        <td>N/A</td>
-                        <td>$9.99</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="9.99" data-name="Chicken Fry"></td>
-                        <td>Chicken Fry</td>
-                        <td>N/A</td>
-                        <td>$9.99</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="9.99" data-name="Chicken Pakooda"></td>
-                        <td>Chicken Pakooda</td>
-                        <td>N/A</td>
-                        <td>$9.99</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="14.99" data-name="Talawa Gosh Mutton"></td>
-                        <td>Talawa Gosh Mutton</td>
-                        <td>N/A</td>
-                        <td>$14.99</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h2>Curries</h2>
-            <table border="1" cellpadding="8" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Select</th>
-                        <th>Recipe</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="checkbox" data-price="9.99" data-name="Butter Chicken"></td>
-                        <td>Butter Chicken</td>
-                        <td>N/A</td>
-                        <td>$9.99</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="9.99" data-name="Chicken Tikka Masala"></td>
-                        <td>Chicken Tikka Masala</td>
-                        <td>N/A</td>
-                        <td>$9.99</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="14.99" data-name="Gongura Mutton"></td>
-                        <td>Gongura Mutton</td>
-                        <td>N/A</td>
-                        <td>$14.99</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="16.99" data-name="Prawn’s"></td>
-                        <td>Prawn’s</td>
-                        <td>N/A</td>
-                        <td>$16.99</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h2>Sweets</h2>
-            <table border="1" cellpadding="8" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Select</th>
-                        <th>Recipe</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="checkbox" data-price="10.00" data-name="Boondi Laddoo"></td>
-                        <td>Boondi Laddoo</td>
-                        <td>15 count</td>
-                        <td>$10.00</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="10.00" data-name="Arisalu"></td>
-                        <td>Arisalu</td>
-                        <td>12 count</td>
-                        <td>$10.00</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="10.00" data-name="Kaju Roll"></td>
-                        <td>Kaju Roll</td>
-                        <td>15 count</td>
-                        <td>$10.00</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="10.00" data-name="Malpuri"></td>
-                        <td>Malpuri</td>
-                        <td>5 count</td>
-                        <td>$10.00</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h2>Namkeen</h2>
-            <table border="1" cellpadding="8" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Select</th>
-                        <th>Recipe</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="checkbox" data-price="10.00" data-name="Boondi Mixter"></td>
-                        <td>Boondi Mixter</td>
-                        <td>700g</td>
-                        <td>$10.00</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="10.00" data-name="Murukulu"></td>
-                        <td>Murukulu</td>
-                        <td>700g</td>
-                        <td>$10.00</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" data-price="10.00" data-name="Chakkalu"></td>
-                        <td>Chakkalu</td>
-                        <td>40 count</td>
-                        <td>$10.00</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div id="menu-container"></div>
         </section>
 
         <!-- Cart summary -->
@@ -385,7 +157,6 @@
                 Selected Items: <span id="itemCount">0</span><br />
                 Total Price: $<span id="totalPrice">0.00</span>
             </div>
-
             <button id="copyCartBtn"
                 style="margin-top: 10px; padding: 8px 12px; background:#ff8800; border:none; color:#000; cursor:pointer;">
                 Copy Cart
@@ -397,25 +168,91 @@
         </footer>
 
         <script>
-            function searchMenu() {
-                const input = document.getElementById('searchInput').value.toLowerCase();
-                const items = document.querySelectorAll('#menu tr');
-                items.forEach(item => {
-                    const text = item.textContent.toLowerCase();
-                    item.style.display = text.includes(input) ? '' : 'none';
-                });
+            const menuData = {
+                "Biryani": [
+                    { name: "Mutton Biryani", quantity: "Single", price: 14.99 },
+                    { name: "Mutton Biryani", quantity: "Family Pack", price: 49.99 },
+                    { name: "Mutton Biryani", quantity: "Half Tray", price: 74.99 },
+                    { name: "Mutton Biryani", quantity: "Full Tray", price: 149.99 },
+                    { name: "Chicken Biryani", quantity: "Single", price: 10.99 },
+                    { name: "Veg Biryani", quantity: "Single", price: 9.99 }
+                ],
+                "Chicken (Any item $9.99)": [
+                    { name: "Butter Chicken", quantity: "N/A", price: 9.99 },
+                    { name: "Chicken Tikka Masala", quantity: "N/A", price: 9.99 },
+                    { name: "Chicken Kabab", quantity: "N/A", price: 9.99 },
+                    { name: "Chicken Curry", quantity: "N/A", price: 9.99 }
+                ],
+                "Mutton (Any item $14.99)": [
+                    { name: "Mutton Curry", quantity: "N/A", price: 14.99 },
+                    { name: "Mutton Haleem", quantity: "N/A", price: 14.99 },
+                    { name: "Mutton Arabian Mandi", quantity: "N/A", price: 14.99 }
+                ],
+                "Starters": [
+                    { name: "Hyd Siddique Kabab", quantity: "N/A", price: 9.99 },
+                    { name: "Chicken Fry", quantity: "N/A", price: 9.99 },
+                    { name: "Chicken Pakooda", quantity: "N/A", price: 9.99 },
+                    { name: "Talawa Gosh Mutton", quantity: "N/A", price: 14.99 }
+                ],
+                "Curries": [
+                    { name: "Butter Chicken", quantity: "N/A", price: 9.99 },
+                    { name: "Chicken Tikka Masala", quantity: "N/A", price: 9.99 },
+                    { name: "Gongura Mutton", quantity: "N/A", price: 14.99 },
+                    { name: "Prawn’s", quantity: "N/A", price: 16.99 }
+                ],
+                "Sweets": [
+                    { name: "Boondi Laddoo", quantity: "15 count", price: 10.00 },
+                    { name: "Arisalu", quantity: "12 count", price: 10.00 },
+                    { name: "Kaju Roll", quantity: "15 count", price: 10.00 },
+                    { name: "Malpuri", quantity: "5 count", price: 10.00 }
+                ],
+                "Namkeen": [
+                    { name: "Boondi Mixter", quantity: "700g", price: 10.00 },
+                    { name: "Murukulu", quantity: "700g", price: 10.00 },
+                    { name: "Chakkalu", quantity: "40 count", price: 10.00 }
+                ]
+            };
+
+            function renderMenu() {
+                const container = document.getElementById("menu-container");
+                container.innerHTML = "";
+                for (const category in menuData) {
+                    const section = document.createElement("div");
+                    section.innerHTML = `<h2>${category}</h2>`;
+
+                    const ul = document.createElement("ul");
+                    ul.className = "menu-list";
+
+                    menuData[category].forEach(item => {
+                        const li = document.createElement("li");
+                        const itemName = `${item.name}${item.quantity !== 'N/A' ? ' - ' + item.quantity : ''}`;
+
+                        li.innerHTML = `
+            <label>
+              <input type="checkbox" data-price="${item.price}" data-name="${itemName}">
+              <span class="item-info">
+                <strong>${item.name}</strong>
+                <span class="details-line">
+                  <span>${item.quantity}</span>
+                  <span class="price">$${item.price.toFixed(2)}</span>
+                </span>
+              </span>
+            </label>
+          `;
+                        ul.appendChild(li);
+                    });
+
+                    section.appendChild(ul);
+                    container.appendChild(section);
+                }
             }
 
-            // Update cart when checkbox changes
             function updateCart() {
                 const cartItemsContainer = document.getElementById('cartItems');
                 const itemCountSpan = document.getElementById('itemCount');
                 const totalPriceSpan = document.getElementById('totalPrice');
 
-                // Clear current cart display
                 cartItemsContainer.innerHTML = '';
-
-                // Find all checked checkboxes
                 const checkedBoxes = document.querySelectorAll('input[type="checkbox"]:checked');
 
                 let totalPrice = 0;
@@ -425,7 +262,6 @@
 
                     totalPrice += price;
 
-                    // Create li for each selected item
                     const li = document.createElement('li');
                     li.textContent = `${name} - $${price.toFixed(2)}`;
                     cartItemsContainer.appendChild(li);
@@ -435,13 +271,21 @@
                 totalPriceSpan.textContent = totalPrice.toFixed(2);
             }
 
-            // Attach event listeners to all checkboxes
-            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-                checkbox.addEventListener('change', updateCart);
-            });
+            function searchMenu() {
+                const input = document.getElementById('searchInput').value.toLowerCase();
+                const items = document.querySelectorAll('#menu-container li');
+                items.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    item.style.display = text.includes(input) ? '' : 'none';
+                });
+            }
 
-            // Initialize cart on page load
-            updateCart();
+            document.addEventListener("DOMContentLoaded", () => {
+                renderMenu();
+                document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                    checkbox.addEventListener('change', updateCart);
+                });
+            });
         </script>
         <script>
             // Existing functions remain...
