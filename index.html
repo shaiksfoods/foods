@@ -1,127 +1,329 @@
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shaik's Foods</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
-    header, section {
-      padding: 20px;
-    }
-    header {
-      background-color: #ff8800;
-      color: #000;
-      text-align: center;
-    }
-    h1 {
-      margin: 0;
-    }
-    .menu-section {
-      background-color: #222;
-      margin-bottom: 20px;
-    }
-    h2 {
-      border-bottom: 2px solid #ff8800;
-      padding-bottom: 5px;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      padding: 5px 0;
-    }
-    .search-bar {
-      margin: 20px 0;
-      text-align: center;
-    }
-    input[type="text"] {
-      padding: 10px;
-      width: 80%;
-      max-width: 400px;
-      border: none;
-      border-radius: 5px;
-    }
-    footer {
-      background-color: #ff8800;
-      color: #000;
-      text-align: center;
-      padding: 10px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Shaik's Foods</h1>
-    <p>Contact: 1234567890</p>
-  </header>  <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="Search recipes..." onkeyup="searchMenu()" />
-  </div>  <section class="menu-section" id="menu">
-    <h2>Biryani</h2>
-    <ul>
-      <li>Mutton Biryani - Single $14.99</li>
-      <li>Mutton Biryani - Family Pack $49.99</li>
-      <li>Mutton Biryani - Half Tray $74.99</li>
-      <li>Mutton Biryani - Full Tray $149.99</li>
-      <li>Chicken Biryani - Single $10.99</li>
-      <li>Veg Biryani - Single $9.99</li>
-    </ul>
-    <h2>Chicken (Any item $9.99)</h2>
-    <ul>
-      <li>Butter Chicken</li>
-      <li>Chicken Tikka Masala</li>
-      <li>Chicken Kabab</li>
-      <li>Chicken Curry</li>
-    </ul>
-    <h2>Mutton (Any item $14.99)</h2>
-    <ul>
-      <li>Mutton Curry</li>
-      <li>Mutton Haleem</li>
-      <li>Mutton Arabian Mandi</li>
-    </ul>
-    <h2>Starters</h2>
-    <ul>
-      <li>Hyd Siddique Kabab $9.99</li>
-      <li>Chicken Fry $9.99</li>
-      <li>Chicken Pakooda $9.99</li>
-      <li>Talawa Gosh Mutton $14.99</li>
-    </ul>
-    <h2>Curries</h2>
-    <ul>
-      <li>Butter Chicken $9.99</li>
-      <li>Chicken Tikka Masala $9.99</li>
-      <li>Gongura Mutton $14.99</li>
-      <li>Prawn’s $16.99</li>
-    </ul>
-    <h2>Sweets</h2>
-    <ul>
-      <li>Boondi Laddoo (15 count $10)</li>
-      <li>Arisalu (12 count $10)</li>
-      <li>Kaju Roll (15 count $10)</li>
-      <li>Malpuri (5 count $10)</li>
-    </ul>
-    <h2>Namkeen</h2>
-    <ul>
-      <li>Boondi Mixter (700g $10)</li>
-      <li>Murukulu (700g $10)</li>
-      <li>Chakkalu (40 count $10)</li>
-    </ul>
-  </section>  <footer>
-    <p>&copy; 2025 Shaik's Foods</p>
-  </footer>  <script>
-    function searchMenu() {
-      const input = document.getElementById('searchInput').value.toLowerCase();
-      const items = document.querySelectorAll('#menu ul li');
-      items.forEach(item => {
-        const text = item.textContent.toLowerCase();
-        item.style.display = text.includes(input) ? '' : 'none';
-      });
-    }
-  </script></body>
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shaik's Foods</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #111;
+                color: #fff;
+                margin: 0;
+                padding: 0;
+            }
+            table{
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 50px;
+                 border: 2px solid #ff8800;
+            }
+
+            header,
+            section {
+                padding: 20px;
+            }
+
+            header {
+                background-color: #ff8800;
+                color: #000;
+                text-align: center;
+            }
+
+            h1 {
+                margin: 0;
+            }
+
+            .menu-section {
+                background-color: #222;
+                margin: 0 auto;
+                width: 50%;
+                margin-bottom: 20px;
+
+            }
+
+            h2 {
+               
+                padding-bottom: 2px;
+            }
+
+            .search-bar {
+                margin: 20px 0;
+                text-align: center;
+            }
+
+            input[type="text"] {
+                padding: 10px;
+                width: 80%;
+                max-width: 400px;
+                border: none;
+                border-radius: 5px;
+            }
+
+            footer {
+                background-color: #ff8800;
+                color: #000;
+                text-align: center;
+                padding: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Shaik's Foods</h1>
+            <p>Contact: 1234567890</p>
+        </header>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search recipes..." onkeyup="searchMenu()" />
+        </div>
+        <section class="menu-section" id="menu">
+            <h2>Biryani</h2>
+            <table width="100%" border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Recipe</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mutton Biryani</td>
+                        <td>Single</td>
+                        <td>$14.99</td>
+                    </tr>
+                    <tr>
+                        <td>Mutton Biryani</td>
+                        <td>Family Pack</td>
+                        <td>$49.99</td>
+                    </tr>
+                    <tr>
+                        <td>Mutton Biryani</td>
+                        <td>Half Tray</td>
+                        <td>$74.99</td>
+                    </tr>
+                    <tr>
+                        <td>Mutton Biryani</td>
+                        <td>Full Tray</td>
+                        <td>$149.99</td>
+                    </tr>
+                    <tr>
+                        <td>Chicken Biryani</td>
+                        <td>Single</td>
+                        <td>$10.99</td>
+                    </tr>
+                    <tr>
+                        <td>Veg Biryani</td>
+                        <td>Single</td>
+                        <td>$9.99</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Chicken (Any item $9.99)</h2>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Recipe</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Butter Chicken</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Chicken Tikka Masala</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Chicken Kabab</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Chicken Curry</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Mutton (Any item $14.99)</h2>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Recipe</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mutton Curry</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Mutton Haleem</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Mutton Arabian Mandi</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Starters</h2>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Recipe</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hyd Siddique Kabab</td>
+                        <td>N/A</td>
+                        <td>$9.99</td>
+                    </tr>
+                    <tr>
+                        <td>Chicken Fry</td>
+                        <td>N/A</td>
+                        <td>$9.99</td>
+                    </tr>
+                    <tr>
+                        <td>Chicken Pakooda</td>
+                        <td>N/A</td>
+                        <td>$9.99</td>
+                    </tr>
+                    <tr>
+                        <td>Talawa Gosh Mutton</td>
+                        <td>N/A</td>
+                        <td>$14.99</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Curries</h2>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Recipe</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Butter Chicken</td>
+                        <td>N/A</td>
+                        <td>$9.99</td>
+                    </tr>
+                    <tr>
+                        <td>Chicken Tikka Masala</td>
+                        <td>N/A</td>
+                        <td>$9.99</td>
+                    </tr>
+                    <tr>
+                        <td>Gongura Mutton</td>
+                        <td>N/A</td>
+                        <td>$14.99</td>
+                    </tr>
+                    <tr>
+                        <td>Prawn’s</td>
+                        <td>N/A</td>
+                        <td>$16.99</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Sweets</h2>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Recipe</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Boondi Laddoo</td>
+                        <td>15 count</td>
+                        <td>$10.00</td>
+                    </tr>
+                    <tr>
+                        <td>Arisalu</td>
+                        <td>12 count</td>
+                        <td>$10.00</td>
+                    </tr>
+                    <tr>
+                        <td>Kaju Roll</td>
+                        <td>15 count</td>
+                        <td>$10.00</td>
+                    </tr>
+                    <tr>
+                        <td>Malpuri</td>
+                        <td>5 count</td>
+                        <td>$10.00</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Namkeen</h2>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Recipe</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Boondi Mixter</td>
+                        <td>700g</td>
+                        <td>$10.00</td>
+                    </tr>
+                    <tr>
+                        <td>Murukulu</td>
+                        <td>700g</td>
+                        <td>$10.00</td>
+                    </tr>
+                    <tr>
+                        <td>Chakkalu</td>
+                        <td>40 count</td>
+                        <td>$10.00</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+        <footer>
+            <p>&copy; 2025 Shaik's Foods</p>
+        </footer>
+        <script>
+            function searchMenu() {
+                const input = document.getElementById('searchInput').value.toLowerCase();
+                const items = document.querySelectorAll('#menu tr');
+                items.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    item.style.display = text.includes(input) ? '' : 'none';
+                });
+            }
+        </script>
+    </body>
+
 </html>
